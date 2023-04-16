@@ -6,7 +6,7 @@ Config.Recipes = {
 
     ["Meat"] = {
         name =  'meat',
-        cooktime = 5000,
+        crafttime = 5000,
         ingredients = {
             [1] = { item = "raw_meat", amount = 1 }
         },
@@ -15,7 +15,7 @@ Config.Recipes = {
 
     ["Fish"] = {
         name = 'fish',
-        cooktime = 5000,
+        crafttime = 5000,
         ingredients = {
             [1] = { item = "raw_fish", amount = 1 }
         },
