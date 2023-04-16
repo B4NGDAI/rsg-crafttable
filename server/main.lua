@@ -35,7 +35,7 @@ RSGCore.Functions.CreateCallback('rsg-crafttable:server:checkingredients', funct
                 cb(true)
             end
         else
-            TriggerClientEvent('RSGCore:Notify', src, Lang:t('error.you_dont_have_the_required_items'), 'error')
+            TriggerClientEvent('RSGCore:Notify', src, 'you don/t have the require items!', 'error')
             cb(false)
             return
         end
@@ -56,8 +56,7 @@ AddEventHandler('rsg-crafttable:server:finishcrafting', function(ingredients, re
         Player.Functions.RemoveItem(v.item, v.amount)
         TriggerClientEvent('inventory:client:ItemBox', src, RSGCore.Shared.Items[v.item], "remove")
     end
-    -- add cooked item
     Player.Functions.AddItem(receive, 1)
     TriggerClientEvent('inventory:client:ItemBox', src, RSGCore.Shared.Items[receive], "add")
-    TriggerClientEvent('RSGCore:Notify', src, Lang:t('success.cooking_finished'), 'success')
+    TriggerClientEvent('RSGCore:Notify', src, 'crafting finished!', 'success')
 end)
